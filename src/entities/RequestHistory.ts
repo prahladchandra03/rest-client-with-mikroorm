@@ -1,4 +1,4 @@
-import { Entity, PrimaryKey, Property } from '@mikro-orm/core';
+import { Entity, PrimaryKey, Property, Opt } from '@mikro-orm/core'; // 1. Import 'Opt'
 
 @Entity()
 export class RequestHistory {
@@ -23,6 +23,7 @@ export class RequestHistory {
   @Property({ type: 'json', nullable: true })
   response?: object;
 
+  // 2. Change 'Date' to 'Date & Opt'
   @Property()
-  createdAt: Date = new Date();
+  createdAt: Date & Opt = new Date(); 
 }
