@@ -1,4 +1,4 @@
-import { Entity, PrimaryKey, Property, Opt } from '@mikro-orm/core'; // 1. Import 'Opt'
+import { Entity, PrimaryKey, Property, Opt } from '@mikro-orm/core';
 
 @Entity()
 export class RequestHistory {
